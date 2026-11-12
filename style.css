@@ -1,96 +1,160 @@
-/* =========================
-   NARESH SHARMA PORTFOLIO
-   Bootstrap 5 + Custom CSS
-========================= */
+  border:5px solid #fff;box-shadow:0 0 0 2px #dce4f2;
+}
+.timeline-content{
+  background:#fff;border:1px solid var(--border);border-radius:20px;
+  padding:27px;box-shadow:0 8px 30px rgba(10,35,80,.05);
+}
+.timeline-date{
+  display:inline-block;color:var(--blue);font-weight:800;
+  font-size:.78rem;background:#edf3ff;padding:6px 11px;border-radius:30px;
+}
+.timeline-content h3{margin:13px 0 0;font-size:1.35rem}
+.timeline-content h5{color:#667085;font-size:.9rem;margin:5px 0 15px}
+.timeline-content li{color:var(--muted);font-size:.9rem;margin-bottom:6px}
 
-:root{
-  --navy:#071f57;
-  --blue:#0d3b9e;
-  --blue2:#1455c0;
-  --yellow:#ffc107;
-  --dark:#101828;
-  --muted:#667085;
-  --light:#f5f7fb;
-  --white:#fff;
-  --border:#e6eaf2;
+/* EDUCATION */
+.panel-title{display:flex;align-items:center;gap:13px;margin-bottom:22px}
+.panel-title i{
+  width:45px;height:45px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:#eaf1ff;color:var(--blue);
 }
+.panel-title h3{margin:0;font-size:1.3rem}
+.education-item{border-left:3px solid var(--yellow);padding:2px 0 2px 20px;margin:20px 0}
+.education-item h4{font-size:1.05rem;color:var(--navy);margin-bottom:3px}
+.education-item p{margin:0;color:var(--muted);font-size:.9rem}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.cert-grid span{font-size:.88rem;color:#46546b}
+.cert-grid i{color:#159957;margin-right:7px}
+.strength-box{padding:28px}
+.strength{
+  display:flex;align-items:center;gap:8px;
+  padding:11px 14px;background:#f7f9fd;border-radius:11px;
+  font-size:.86rem;font-weight:600;color:#344054;
+}
+.strength i{color:#1557bd}
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{
-  margin:0;
-  font-family:"Inter",sans-serif;
-  color:var(--dark);
-  background:#fff;
-  line-height:1.7;
-}
-h1,h2,h3,h4,h5,h6{font-family:"Poppins",sans-serif}
-a{text-decoration:none}
-.section-padding{padding:95px 0}
-.bg-light{background:var(--light)!important}
-
-/* NAVBAR */
-.custom-navbar{
-  background:rgba(5,24,66,.94);
-  backdrop-filter:blur(12px);
-  box-shadow:0 5px 25px rgba(0,0,0,.12);
-  transition:.3s;
-}
-.navbar-brand{font-size:1.2rem;letter-spacing:.2px}
-.brand-mark{
-  display:inline-flex;
-  width:39px;height:39px;
-  border-radius:50%;
-  align-items:center;justify-content:center;
-  margin-right:8px;
-  background:var(--yellow);
-  color:#071f57;
-  font-size:.85rem;
-}
-.nav-link{
-  color:#dce5ff!important;
-  font-weight:500;
-  position:relative;
-  padding:1rem .8rem!important;
-}
-.nav-link:after{
-  content:"";
-  position:absolute;
-  left:12px;right:12px;bottom:7px;
-  height:2px;background:var(--yellow);
-  transform:scaleX(0);
-  transition:.25s;
-}
-.nav-link:hover:after,.nav-link.active:after{transform:scaleX(1)}
-.nav-link.active{color:#fff!important}
-
-/* HERO */
-.hero-section{
-  position:relative;
-  overflow:hidden;
-  min-height:100vh;
-  color:#fff;
+/* CONTACT */
+.contact-section{
   background:
-    radial-gradient(circle at 80% 20%,rgba(25,91,207,.45),transparent 28%),
-    linear-gradient(135deg,#04163f 0%,#08265f 55%,#0c3b91 100%);
+    radial-gradient(circle at 90% 20%,rgba(46,113,226,.3),transparent 25%),
+    linear-gradient(135deg,#04163f,#0b3d94);
 }
-.hero-grid{
-  position:absolute;inset:0;opacity:.18;
-  background-image:
-    linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);
-  background-size:45px 45px;
+.contact-section .section-heading>span{color:var(--yellow)}
+.contact-section .section-heading h2{color:#fff}
+.contact-section .section-heading h2 strong{color:var(--yellow)}
+.contact-section .section-heading p{color:#cbd8f1}
+.contact-info,.contact-form{
+  border-radius:22px;padding:32px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.13);
+  backdrop-filter:blur(8px);
 }
-.hero-section:before,.hero-section:after{
-  content:"";position:absolute;border-radius:50%;
-  border:1px solid rgba(255,255,255,.12);
+.contact-info h3{color:#fff;margin-bottom:25px}
+.contact-row{
+  display:flex;gap:15px;align-items:center;
+  color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1);
 }
-.hero-section:before{width:450px;height:450px;right:-170px;top:80px}
-.hero-section:after{width:300px;height:300px;left:-160px;bottom:-100px}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:8px 16px;border:1px solid rgba(255,255,255,.2);
-  border-radius:50px;background:rgba(255,255,255,.06);
-  font-size:.88rem;
+.contact-row:last-child{border-bottom:0}
+.contact-row i{
+  width:45px;height:45px;border-radius:12px;
+  background:rgba(255,193,7,.14);color:var(--yellow);
+  display:flex;align-items:center;justify-content:center;
 }
-.hero-badge span{
+.contact-row small,.contact-row strong{display:block}
+.contact-row small{color:#aebedd;font-size:.75rem}
+.contact-row strong{font-size:.88rem;word-break:break-word}
+.contact-form label{color:#dbe5f8;font-size:.82rem;font-weight:600;margin-bottom:6px}
+.contact-form .form-control{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;border-radius:12px;padding:12px 14px;
+}
+.contact-form .form-control::placeholder{color:#91a2c5}
+.contact-form .form-control:focus{
+  background:rgba(255,255,255,.12);color:#fff;
+  border-color:var(--yellow);box-shadow:0 0 0 .2rem rgba(255,193,7,.1);
+}
+
+/* FOOTER */
+.footer{background:#03112f;color:#9dafcf;padding:45px 0 25px}
+.footer-brand{font-family:"Poppins";font-size:1.5rem;font-weight:800;color:#fff}
+.footer-brand span{color:var(--yellow)}
+.footer p{margin:5px 0 17px}
+.footer-socials a{
+  display:inline-flex;width:38px;height:38px;margin:0 4px;
+  border:1px solid #2a3b5d;color:#fff;border-radius:50%;
+  align-items:center;justify-content:center;transition:.25s;
+}
+.footer-socials a:hover{background:var(--yellow);color:var(--navy);transform:translateY(-3px)}
+.footer hr{border-color:#1e3153;margin:25px 0}
+.quote{font-style:italic;margin-top:10px;color:#7185aa}
+
+#backToTop{
+  position:fixed;right:22px;bottom:22px;width:45px;height:45px;
+  border:0;border-radius:50%;background:var(--yellow);color:var(--navy);
+  display:none;z-index:999;font-weight:800;box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+  .navbar-nav{padding:12px 0}
+  .nav-link{padding:.55rem .8rem!important}
+  .hero-section h1{letter-spacing:-1.5px}
+  .profile-card{height:330px}
+  .profile-avatar{width:220px;height:220px;font-size:5rem}
+  .profile-ring{width:285px;height:285px}
+}
+@media(max-width:575px){
+  .section-padding{padding:70px 0}
+  .section-heading h2{font-size:2rem}
+  .hero-section h1{font-size:3.2rem}
+  .hero-title{font-size:1.05rem}
+  .hero-text{font-size:.95rem}
+  .profile-card{transform:scale(.88);margin-top:-5px!important}
+  .stats-card{grid-template-columns:1fr 1fr}
+  .stat{min-height:130px}
+  .stat strong{font-size:2.1rem}
+  .cert-grid{grid-template-columns:1fr}
+  .timeline-item{padding-left:62px}
+  .timeline:before{left:20px}
+  .timeline-dot{width:42px;height:42px}
+  .contact-info,.contact-form,.about-card,.stats-card,.info-panel,.strength-box{padding:23px}
+}
+
+/* =========================================================
+   NARESH SHARMA PORTFOLIO – HERO PROFILE (IMAGE NO. 2 STYLE)
+   Added overrides: purple NS circle, yellow segmented ring,
+   and six correctly positioned skill cards.
+========================================================= */
+
+.hero-section {
+  overflow: hidden;
+}
+
+.profile-card {
+  width: 560px;
+  height: 560px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Segmented yellow ring */
+.profile-ring {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from -30deg,
+    #ffbd00 0deg 48deg,
+    transparent 48deg 75deg,
