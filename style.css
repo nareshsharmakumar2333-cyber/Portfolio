@@ -596,3 +596,163 @@ a{text-decoration:none}
   .hero-section .profile-ring,.hero-section .profile-card .floating-card{animation:none!important}
 }
 
+/* ===== FINAL HERO PROFILE FIX ===== */
+
+.profile-card {
+    position: relative !important;
+    width: 450px !important;
+    max-width: 100% !important;
+    height: 450px !important;
+    margin: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+
+.profile-ring {
+    position: absolute !important;
+    width: 310px !important;
+    height: 310px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    z-index: 1 !important;
+    animation: rotateYellowRing 8s linear infinite !important;
+}
+
+.profile-ring::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    border-radius: 50% !important;
+    background: conic-gradient(
+        #ffc107 0deg 55deg,
+        transparent 55deg 85deg,
+        #ffc107 85deg 145deg,
+        transparent 145deg 175deg,
+        #ffc107 175deg 235deg,
+        transparent 235deg 265deg,
+        #ffc107 265deg 325deg,
+        transparent 325deg 360deg
+    ) !important;
+    -webkit-mask: radial-gradient(
+        circle, transparent 0 91%, #000 92% 100%
+    ) !important;
+    mask: radial-gradient(
+        circle, transparent 0 91%, #000 92% 100%
+    ) !important;
+}
+
+@keyframes rotateYellowRing {
+    to { transform: rotate(360deg); }
+}
+
+.profile-avatar {
+    position: relative !important;
+    width: 170px !important;
+    height: 170px !important;
+    flex: 0 0 170px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg,#2858f5,#5620ed) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 55px !important;
+    font-weight: 700 !important;
+    z-index: 5 !important;
+}
+
+.floating-card {
+    position: absolute !important;
+    width: 180px !important;
+    min-width: 180px !important;
+    min-height: 70px !important;
+    padding: 12px 15px !important;
+    background: #fff !important;
+    color: #102653 !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    z-index: 20 !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15) !important;
+}
+
+.floating-card i {
+    font-size: 23px !important;
+    color: #1946b8 !important;
+}
+
+.card-one {
+    top: -5px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.card-two {
+    top: 115px !important;
+    right: -15px !important;
+}
+
+.card-three {
+    bottom: 65px !important;
+    right: -15px !important;
+}
+
+.card-four {
+    bottom: -5px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.card-five {
+    bottom: 65px !important;
+    left: -15px !important;
+}
+
+.card-six {
+    top: 115px !important;
+    left: -15px !important;
+}
+
+/* MOBILE FIX */
+
+@media(max-width:576px) {
+    .profile-card {
+        width: 340px !important;
+        height: 390px !important;
+    }
+
+    .profile-ring {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    .profile-avatar {
+        width: 135px !important;
+        height: 135px !important;
+        flex-basis: 135px !important;
+        font-size: 42px !important;
+    }
+
+    .floating-card {
+        width: auto !important;
+        min-width: 105px !important;
+        min-height: 42px !important;
+        padding: 7px 9px !important;
+        font-size: 12px !important;
+    }
+
+    .card-one { top: 5px !important; }
+    .card-two { top: 82px !important; right: -5px !important; }
+    .card-three { bottom: 60px !important; right: -5px !important; }
+    .card-four { bottom: 5px !important; }
+    .card-five { bottom: 60px !important; left: -5px !important; }
+    .card-six { top: 82px !important; left: -5px !important; }
+}
+
