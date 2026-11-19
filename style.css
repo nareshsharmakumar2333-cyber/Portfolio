@@ -1165,3 +1165,77 @@ a{text-decoration:none}
     }
 }
 
+/* FINAL PROFILE RING FIX */
+
+.profile-card {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: visible !important;
+    transform: translateY(20px);
+}
+
+.profile-ring {
+    position: absolute !important;
+    width: 310px !important;
+    height: 310px !important;
+    border-radius: 50% !important;
+
+    background: conic-gradient(
+        #ffc107 0deg 55deg,
+        transparent 55deg 85deg,
+        #ffc107 85deg 145deg,
+        transparent 145deg 175deg,
+        #ffc107 175deg 235deg,
+        transparent 235deg 265deg,
+        #ffc107 265deg 325deg,
+        transparent 325deg 360deg
+    ) !important;
+
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 15px),
+        #000 calc(100% - 14px)
+    ) !important;
+
+    mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 15px),
+        #000 calc(100% - 14px)
+    ) !important;
+
+    z-index: 2 !important;
+    animation: nsRingRotate 8s linear infinite !important;
+}
+
+.profile-ring::before {
+    content: none !important;
+}
+
+@keyframes nsRingRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-avatar {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* REACT CARD POSITION */
+
+.card-one {
+    top: 15px !important;
+}
+
+@media(max-width:576px) {
+    .profile-card {
+        transform: translateY(10px) !important;
+    }
+
+    .profile-ring {
+        width: 240px !important;
+        height: 240px !important;
+    }
+}
+
