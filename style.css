@@ -756,3 +756,20 @@ a{text-decoration:none}
     .card-six { top: 82px !important; left: -5px !important; }
 }
 
+/* ABOUT SECTION BACKGROUND FIX */
+#about,
+.about-section {
+    background-color: #f5f7fb !important;
+}
+
+/* OTHER SECTION BACKGROUNDS */
+#skills,
+#experience,
+#education {
+    background-color: #ffffff !important;
+}
+
+#projects {
+    background-color: #f5f7fb !important;
+}
+
