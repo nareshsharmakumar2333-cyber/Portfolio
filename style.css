@@ -773,3 +773,68 @@ a{text-decoration:none}
     background-color: #f5f7fb !important;
 }
 
+/* ===== CONTACT SECTION FINAL FIX ===== */
+
+.contact-section {
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(46,113,226,.3),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #04163f,
+            #0b3d94
+        ) !important;
+    color: #ffffff !important;
+}
+
+.contact-section .section-heading h2 {
+    color: #ffffff !important;
+}
+
+.contact-section .section-heading h2 strong {
+    color: #ffc107 !important;
+}
+
+.contact-section .section-heading p {
+    color: #cbd8f1 !important;
+}
+
+.contact-section .contact-info,
+.contact-section .contact-form {
+    background: rgba(255,255,255,.08) !important;
+    border: 1px solid rgba(255,255,255,.15) !important;
+}
+
+.contact-section .contact-info h3,
+.contact-section .contact-row,
+.contact-section .contact-form label {
+    color: #ffffff !important;
+}
+
+.contact-section .contact-row small {
+    color: #cbd8f1 !important;
+}
+
+.contact-section .form-control {
+    background: rgba(255,255,255,.09) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,.2) !important;
+}
+
+.contact-section .form-control::placeholder {
+    color: #cbd8f1 !important;
+}
+
+.contact-section .form-control:focus {
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 0 .2rem rgba(255,193,7,.15) !important;
+}
+
+.contact-section .contact-row i {
+    background: rgba(255,193,7,.14) !important;
+    color: #ffc107 !important;
+}
+
