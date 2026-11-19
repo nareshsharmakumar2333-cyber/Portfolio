@@ -838,3 +838,174 @@ a{text-decoration:none}
     color: #ffc107 !important;
 }
 
+/* =====================================
+   PORTFOLIO FINAL DESIGN IMPROVEMENTS
+===================================== */
+
+/* 1. YELLOW ROTATING RING */
+
+.profile-ring {
+    position: absolute !important;
+    width: 310px !important;
+    height: 310px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    z-index: 2 !important;
+    animation: yellowRotate 8s linear infinite !important;
+}
+
+.profile-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #ffc107 0deg 55deg,
+        transparent 55deg 85deg,
+        #ffc107 85deg 145deg,
+        transparent 145deg 175deg,
+        #ffc107 175deg 235deg,
+        transparent 235deg 265deg,
+        #ffc107 265deg 325deg,
+        transparent 325deg 360deg
+    );
+
+    -webkit-mask: radial-gradient(
+        circle,
+        transparent 0 140px,
+        #000 141px 155px
+    );
+
+    mask: radial-gradient(
+        circle,
+        transparent 0 140px,
+        #000 141px 155px
+    );
+}
+
+@keyframes yellowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-avatar {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+
+/* 2. EXPERIENCE AND EDUCATION SPACING */
+
+#experience {
+    padding-bottom: 55px !important;
+}
+
+#education {
+    padding-top: 55px !important;
+    padding-bottom: 65px !important;
+}
+
+
+/* 3. EDUCATION PROFESSIONAL CARDS */
+
+#education .info-panel {
+    background: #ffffff !important;
+    border: 1px solid #e6eaf2 !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+
+    box-shadow:
+        0 10px 35px rgba(15,40,90,.08) !important;
+
+    height: 100%;
+    transition: .3s ease;
+}
+
+#education .info-panel:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(15,40,90,.13) !important;
+}
+
+#education .panel-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+#education .panel-title i {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf1ff;
+    color: #0d3b9e;
+}
+
+#education .panel-title h3 {
+    color: #071f57;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#education .education-item {
+    border-left: 3px solid #ffc107;
+    padding: 5px 0 5px 20px;
+    margin: 20px 0;
+}
+
+#education .education-item h4 {
+    color: #071f57;
+    font-weight: 700;
+}
+
+#education .education-item p {
+    color: #667085;
+}
+
+#education .cert-grid span {
+    color: #344054;
+    font-weight: 500;
+}
+
+/* KEY STRENGTHS CARD */
+
+#education .strength-box {
+    background: #ffffff !important;
+    border: 1px solid #e6eaf2 !important;
+    border-radius: 20px !important;
+
+    box-shadow:
+        0 10px 35px rgba(15,40,90,.07) !important;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:576px) {
+
+    .profile-ring {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    #education .info-panel {
+        padding: 22px !important;
+    }
+
+    #experience {
+        padding-bottom: 35px !important;
+    }
+
+    #education {
+        padding-top: 35px !important;
+    }
+
+}
+
